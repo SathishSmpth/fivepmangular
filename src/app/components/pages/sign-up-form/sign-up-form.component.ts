@@ -37,13 +37,13 @@ export class SignUpFormComponent {
           Validators.required,
           Validators.minLength(10),
           Validators.maxLength(10),
-          Validators.pattern('^[0-9]*$'),
+          Validators.pattern('[0-9]*'),
         ]),
         email: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [
           Validators.required,
           Validators.pattern(
-            '(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*#?&^_-]).{8,99}'
+            /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
           ),
         ]),
         confirmPassword: new FormControl('', [Validators.required]),

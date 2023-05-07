@@ -14,6 +14,8 @@ import { LandPageComponent } from './components/pages/land-page/land-page.compon
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { SignUpFormComponent } from './components/pages/sign-up-form/sign-up-form.component';
 import { UsersComponent } from './components/pages/users/users.component';
+import { DropdownDirective } from './components/directives/dropdown.directive';
+import { offCanvasDirective } from './components/directives/offCanvas.directive';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,10 @@ import { UsersComponent } from './components/pages/users/users.component';
     ContactPageComponent,
     LandPageComponent,
     PageNotFoundComponent,
-    SignUpFormComponent,
+    SignUpFormComponent,    
     UsersComponent,
+    DropdownDirective,
+    offCanvasDirective
   ],
   imports: [
     BrowserModule,
