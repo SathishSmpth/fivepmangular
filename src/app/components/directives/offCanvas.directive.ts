@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[toggleOffCanvas]',
+  selector: '[toggleOffCanvas]'
 })
 export class offCanvasDirective {
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}

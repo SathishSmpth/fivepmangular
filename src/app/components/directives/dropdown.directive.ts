@@ -10,7 +10,6 @@ export class DropdownDirective {
   public toggleDropdown(): void {
     this.toggleClass('show');
   }
- 
 
   @HostListener('document:keydown', ['$event'])
   public onKeyDown(event: KeyboardEvent): void {
@@ -34,8 +33,7 @@ export class DropdownDirective {
   }
 
   private toggleClass(className: string): void {
-    const dropdownMenu =
-      this.elRef.nativeElement.querySelector('.dropdown-menu');
+    const dropdownMenu = this.elRef.nativeElement.nextElementSibling;
     const hasClassShow = dropdownMenu?.classList.contains(className);
 
     if (hasClassShow) {
